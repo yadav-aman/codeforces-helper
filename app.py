@@ -102,7 +102,11 @@ if __name__ == '__main__':
         url = contest_id
     else:
         url = 'https://codeforces.com/contest/'+str(contest_id)
-    
+
+    if not re.search(r"https://codeforces.com/contest/\d+",url):
+        print("Please enter a vaid link")
+        sys.exit(1)
+
     html_data = get_page_data(url)
     question_links = get_question_links(html_data)
 
