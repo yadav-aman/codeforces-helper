@@ -21,7 +21,7 @@ def get_page_data(url):
 #Extract links of questions
 def get_question_links(soup):
     links = []
-    pattern = r"/contest/\d+(/problem/.)"
+    pattern = r"/contest/\d+(/problem/[A-Z0-9]+)"
     for link in soup.findAll('a'):
         res = re.search(pattern,str(link))
         if res and res[1] not in links:
@@ -32,10 +32,10 @@ def get_question_links(soup):
 def get_sample_test(soup):
     sample_tests = soup.find("div",{"class": "sample-test"})
     if sample_tests:
-        sample_tests = sample_tests.get_text(separator="\n")
-    sample_tests = re.sub(r'Input\n\n','Input\n',sample_tests)
-    sample_tests = re.sub(r'Output\n\n','Output\n',sample_tests)
-    return sample_tests.strip()
+        sample_tests = sample_tests.get_text("\n")
+        sample_tests = re.sub(r'Input\n\n','Input\n',sample_tests)
+        sample_tests = re.sub(r'Output\n\n','Output\n',sample_tests).strip()
+    return sample_tests
 
 # create files and directories of the given competition
 def create_files(problem_question_dir,problem_name,test_cases):
@@ -116,4 +116,4 @@ if __name__ == '__main__':
     for link in question_links:
         question_page_data = get_page_data(url+link)
         test_cases = get_sample_test(question_page_data)
-        create_files(problem_question_dir,link[-1],test_cases)
+        create_files(problem_question_dir,re.search(r"[A-Z0-9]+",link)[0],test_cases)

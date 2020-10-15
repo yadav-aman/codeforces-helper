@@ -17,8 +17,8 @@ You can also provide your own template file and the script will create a solutio
     ```
 - examples
     ```
-    python app.py 1320 
+    python app.py 1234 
     ```
     ```
-    python3 app.py https://codeforces.com/contest/1320
+    python3 app.py https://codeforces.com/contest/1234
     ```
