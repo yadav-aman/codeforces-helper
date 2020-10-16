@@ -12,6 +12,7 @@ All sample test cases can be automatically checked using *runtests.py*
 Make sure python3 is installed on your machine.
 ```
 git clone https://github.com/yadav-aman/codeforces-helper.git
+cd codeforces-helper
 ```
 - ### Linux
     ```
