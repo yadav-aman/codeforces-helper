@@ -48,7 +48,7 @@ def create_files(problem_question_dir,problem_name,test_cases):
     test_split = test_cases.split('\n')
     problem_dir = os.path.join(problem_question_dir,problem_name)
     try:
-        os.mkdir(problem_dir)
+        os.mkdir(problem_dir.upper())
     except:
         print("Directory",problem_name,"already exists..\nPerforming following tasks in",problem_name)
     
@@ -57,7 +57,7 @@ def create_files(problem_question_dir,problem_name,test_cases):
         try :
             copyfile('template.cpp',os.path.join(problem_dir,'solution.cpp'))
         except:
-            print("No template file found")
+            print("Error copying, no template file found")
     else:
         print("Solution file already exists")
 
@@ -117,6 +117,12 @@ if __name__ == '__main__':
         os.mkdir(problem_question_dir)
     except:
         print("Directory",problem_question_dir,"already exists..\nPerforming following tasks in",problem_question_dir,"\n")
+
+    try:
+        print("Copying runtest.py to",problem_question_dir,"\n")
+        copyfile('runtests.py',os.path.join(problem_question_dir,'runtests.py'))
+    except:
+        print("Script to run test cases not found\n")
 
     for link in question_links:
         question_page_data = get_page_data(url+link)
