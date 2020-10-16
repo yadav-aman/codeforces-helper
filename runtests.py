@@ -16,6 +16,7 @@ def display_result(expected_output,your_output,test_case_no):
         if ex_out == y_out:
             res = "\nTestcase "+test_case_no+" passed\n"
             print(res)
+            res+='Your Output\n'+y_out+'\n'
             file.write(res)
         else:
             res = f'''\nTestcase {test_case_no} failed\n
@@ -46,7 +47,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     print("Compling solution.cpp")
-    subprocess.run(["g++",'solution.cpp',])
+    subprocess.run(["g++",'solution.cpp'])
     print("Done Compiling\n")
 
     files = os.listdir()
