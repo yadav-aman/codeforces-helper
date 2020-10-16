@@ -1,0 +1,40 @@
+
+Testcase 1 failed
+
+Expected Output of test case 1 :
+3
+
+Your Output of test case 1 :
+0
+
+---------------------------------------------
+
+Testcase 2 failed
+
+Expected Output of test case 2 :
+6
+
+Your Output of test case 2 :
+0
+
+---------------------------------------------
+
+Testcase 3 failed
+
+Expected Output of test case 3 :
+3
+
+Your Output of test case 3 :
+0
+
+---------------------------------------------
+
+Testcase 4 failed
+
+Expected Output of test case 4 :
+6
+
+Your Output of test case 4 :
+0
+
+---------------------------------------------

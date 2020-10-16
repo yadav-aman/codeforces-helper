@@ -1,0 +1,15 @@
+
+Testcase 1 failed
+
+Expected Output of test case 1 :
+YES
+YES
+YES
+NO
+YES
+NO
+
+Your Output of test case 1 :
+
+
+---------------------------------------------

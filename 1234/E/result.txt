@@ -1,0 +1,12 @@
+
+Testcase 1 passed
+Your Output
+3 4 6 5
+
+Testcase 2 passed
+Your Output
+9 8 12 6 8
+
+Testcase 3 passed
+Your Output
+3 3
