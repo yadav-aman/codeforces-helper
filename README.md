@@ -1,8 +1,12 @@
 # Helper bot for codeforces contests
 
-### This script automatically extracts the sample test cases of a given codeforces contest, creates sperate files for inputs and outputs and organises them in sepearte folder (independent of OS).
+### This script automatically extracts the sample test cases of a given codeforces contest, creates sparate files for inputs and outputs and organizes them in saperate folder of each problem.
 
-You can also provide your own template file and the script will create a solution file based on the template file for each question.
+You can also provide your own template file and the script will create a solution file based on the template file for each question in the contest.
+
+This script works on both windows and linux
+
+All sample test cases can be automatically checked using *runtests.py*
 
 ## Installation
 Make sure python3 is installed in your machine.
@@ -50,3 +54,6 @@ If i want to check the solution of *Problem D* then i can run the following comm
     ```
     ./runtests.py d
     ```
+
+
+## Please do 🌟 this project if you find it interesting 
