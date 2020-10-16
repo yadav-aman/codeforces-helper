@@ -9,7 +9,7 @@ using namespace std;
 #define pb push_back
 #define mp make_pair
 
-typedef vector<int>		vi;
+typedef vector<int>	vi;
 typedef pair<int, int>	pii;
 
 const int mod = 1000000007;
