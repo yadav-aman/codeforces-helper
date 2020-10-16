@@ -6,17 +6,17 @@ You can also provide your own template file and the script will create a solutio
 
 ## Installation
 Make sure python3 is installed in your machine.
-- Linux
+- ### Linux
     ```
     pip3 install -r requirements.txt
     ```
-- Windows 
+- ### Windows 
     ```
     pip install -r requirements.txt
     ```
 
 ## Usage
-- Linux
+- ### Linux
     ```
     python3 app.py <contest ID or contest URL>
     ```
@@ -28,11 +28,12 @@ Make sure python3 is installed in your machine.
     ```
     ./app.py <contest ID or contest URL>
     ```
-- Windows 
+
+- ### Windows 
     ```
     python app.py <contest ID or contest URL>
     ```
-- examples
+- ### Examples
     ```
     python app.py 1234 
     ```
@@ -41,4 +42,11 @@ Make sure python3 is installed in your machine.
     ```
     ```
     ./app.py 1234
+    ```
+
+## Automatically checking test cases
+- Competiton directory contains runtests.py file that is used to automatically compare expected output with your output.<br/>
+If i want to check the solution of *Problem D* then i can run the following command
+    ```
+    ./runtests.py d
     ```
