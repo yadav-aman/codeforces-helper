@@ -32,9 +32,11 @@ def get_question_links(soup):
 def get_sample_test(soup):
     sample_tests = soup.find("div",{"class": "sample-test"})
     if sample_tests:
-        sample_tests = sample_tests.get_text("\n")
-        sample_tests = re.sub(r'Input\n\n','Input\n',sample_tests)
-        sample_tests = re.sub(r'Output\n\n','Output\n',sample_tests).strip()
+        if sample_tests.find('br'):
+            sample_tests = sample_tests.get_text("\n").strip()
+        else:
+            sample_tests = sample_tests.get_text().strip()
+
     return sample_tests
 
 # create files and directories of the given competition
@@ -97,11 +99,10 @@ if __name__ == '__main__':
     except:
         print("Please provide contest ID or URL of codeforces contest as command line argument")
         sys.exit(1)
-
     if 'https://codeforces.com/contest/' in contest_id:
         url = contest_id
     else:
-        url = 'https://codeforces.com/contest/'+str(contest_id)
+        url = 'https://codeforces.com/contest/'+contest_id
 
     if not re.search(r"https://codeforces.com/contest/\d+",url):
         print("Please enter a vaid link")
@@ -120,4 +121,7 @@ if __name__ == '__main__':
     for link in question_links:
         question_page_data = get_page_data(url+link)
         test_cases = get_sample_test(question_page_data)
+        if not test_cases:
+            print("No test cases found")
+            sys.exit(1)
         create_files(problem_question_dir,re.search(r"[A-Z0-9]+",link)[0],test_cases)
