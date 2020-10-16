@@ -47,8 +47,12 @@ if __name__ == '__main__':
         sys.exit(1)
 
     print("Compling solution.cpp")
-    subprocess.run(["g++",'solution.cpp'])
-    print("Done Compiling\n")
+    exit_status = subprocess.run(["g++",'solution.cpp'])
+    if exit_status.returncode == 0:
+        print("Compilation successful\n")
+    else:
+        print("Compilation error")
+        sys.exit(1)
 
     files = os.listdir()
     input_files = [x for x in files if 'input' in x]
