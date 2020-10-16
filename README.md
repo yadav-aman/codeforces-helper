@@ -9,7 +9,10 @@ This script works on both windows and linux
 All sample test cases can be automatically checked using *runtests.py*
 
 ## Installation
-Make sure python3 is installed in your machine.
+Make sure python3 is installed on your machine.
+```
+git clone https://github.com/yadav-aman/codeforces-helper.git
+```
 - ### Linux
     ```
     pip3 install -r requirements.txt
