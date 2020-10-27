@@ -9,6 +9,7 @@ using namespace std;
 #define pb push_back
 #define mp make_pair
 
+typedef vector<ll> vll;
 typedef vector<int>	vi;
 typedef pair<int, int>	pii;
 
@@ -17,7 +18,6 @@ const int mod = 1000000007;
 int main()
 {
 //====================== CODE =================================
-
 //=============================================================
 	return 0;
 }
