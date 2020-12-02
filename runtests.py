@@ -34,7 +34,7 @@ Expected Output of test case {test_case_no} :
 
 if __name__ == '__main__':
     try:
-        directory = sys.argv[1].upper()
+        directory = sys.argv[1].lower()
         os.chdir(directory)
         # create blank result.txt file
         with open('result.txt','w') as file:

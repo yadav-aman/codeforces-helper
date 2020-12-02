@@ -48,7 +48,7 @@ def create_files(problem_question_dir,problem_name,test_cases):
     test_split = test_cases.split('\n')
     problem_dir = os.path.join(problem_question_dir,problem_name)
     try:
-        os.mkdir(problem_dir.upper())
+        os.mkdir(problem_dir)
     except:
         print("Directory",problem_name,"already exists..\nPerforming following tasks in",problem_name)
     
@@ -130,4 +130,4 @@ if __name__ == '__main__':
         if not test_cases:
             print("No test cases found")
             sys.exit(1)
-        create_files(problem_question_dir,re.search(r"[A-Z0-9]+",link)[0],test_cases)
+        create_files(problem_question_dir,re.search(r"[A-Z0-9]+",link)[0].lower(),test_cases)
