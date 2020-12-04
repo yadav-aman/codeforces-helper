@@ -10,7 +10,7 @@ All sample test cases can be automatically checked using *runtests.py*
 
 ## Installation
 Make sure python3 is installed on your machine.
-```
+```bash
 git clone https://github.com/yadav-aman/codeforces-helper.git
 cd codeforces-helper
 ```
@@ -25,15 +25,15 @@ cd codeforces-helper
 
 ## Usage
 - ### Linux
-    ```
+    ```bash
     python3 app.py <contest ID or contest URL>
     ```
     Make an executable in linux
-    ```
+    ```bash
     chmod +x app.py
     ```
     After making the script executable we can directy run the script as
-    ```
+    ```bash
     ./app.py <contest ID or contest URL>
     ```
 
