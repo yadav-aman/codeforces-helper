@@ -11,12 +11,19 @@ using namespace std;
 
 typedef vector<ll> vll;
 typedef vector<int>	vi;
-typedef pair<int, int>	pii;
+typedef pair<int, int> pii;
 
 const int mod = 1000000007;
 //=============================================================
+void solve(){
+
+}
+//=============================================================
 int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
 //====================== CODE =================================
+//    solve();
 //=============================================================
 	return 0;
 }
